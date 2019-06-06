@@ -174,7 +174,7 @@ add_options() {
 		echo "    dnssec-validation ${dnssec_validate};"
 		echo "    auth-nxdomain no;    # conform to RFC1035"
 		echo "    listen-on-v6 { any; };"
-		echo "    check-names ${check_names};"
+		echo "    check-names master ${check_names};"
 		if [ -n "${forwarders}" ]; then
 			echo "    forwarders {"
 			printf       "${forwarders}"
